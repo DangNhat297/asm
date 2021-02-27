@@ -127,8 +127,8 @@ hr{
     padding-right: 20px;
 }
 .chuchay marquee{
-    display: block;
-    width: 81%;
+    display: inline-block;
+    width: 80%;
     float: right;
 }
 /* tin tuc-sukien, lich cong tac */
@@ -142,7 +142,7 @@ hr{
     width: 47%;
     display: block;
     float: right;
-    min-height: 450px;
+    max-height: 460px;
 }
 /* tin tuc - su kien */
 .left .title{
@@ -220,6 +220,27 @@ hr{
 /* lich cong tac */
 .right{
     border: 1px solid #0963cc;
+}
+.table-right table{
+    border-collapse: collapse;
+    font-size: 13px;
+    border-style: hidden;
+}
+.table-right .dong1{
+    background-color: #bdc9d9;
+}
+.table-right th,td{
+    padding: 2px;
+}
+.table-right ul{
+    list-style-type: none;
+}
+.table-right ul li::before{
+    content: "\f0a4";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    opacity: 0.5;
+    margin: 0px 4px 0px 3px;
 }
 .right .title{
     height: 40px;
@@ -462,12 +483,17 @@ hr{
     cursor: pointer;
 }
 /* intro */
+#intro .main .col-left{
+    display: inline-block;
+    width: 20%;
+    height: auto;
+}
 #intro .main .col1{
     display: block;
     border: 1px solid #0963cc;
     float: left;
-    width: 20%;
-    min-height: 300px;
+    width: 100%;
+    min-height: 100px;
 }
 #intro .main .title{
     height: 40px;
@@ -571,7 +597,7 @@ hr{
     font-weight: bold;
     padding-left: 10px;
 }
-#questions .q-a img{
+#questions .q-a>img{
     width: 40%;
     height: auto;
     display: block;
@@ -604,4 +630,36 @@ hr{
 .list-question ul li .timepost{
     color:rgb(141, 141, 141);
     font-size: 14px;
+}
+.q-a .slideshow{
+    padding: 10px;
+    text-align: center;
+    display: block;
+}
+.q-a>.slideshow>img{
+    width: 80%;
+    border: 0.5px dotted #1085e6;
+    padding: 10px; 
+    height: 430px;
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+}
+.q-a>.slideshow>button{
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #0963cc;
+    color: white;
+    outline: none;
+    border: none;
+    transition: all 0.2s linear;
+}
+.q-a>.slideshow>button:hover{
+    background-color: white;
+    color: #0963cc;
+    border: 0.5px solid #0963cc;
+    cursor: pointer;
 }
