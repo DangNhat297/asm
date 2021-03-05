@@ -4,6 +4,44 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
 /* overflow scroll */
 #style-2::-webkit-scrollbar-track
 {
@@ -24,6 +62,15 @@
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #cf8989;
 }
+.sticky{
+    background-color: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /*left: 10px;*/
+    /*right: 20px;*/
+    /*bottom: 10px;*/
+}
 /* trang chu - homepage */
 .navhead{
     width: 100%;
@@ -37,6 +84,9 @@
 }
 .main-navhead ul{
     list-style-type: none;
+}
+.main-navhead ul li:first-child{
+    margin: 0px 0px 0px 5px;
 }
 .main-navhead ul li{
     line-height: 30px;
@@ -71,7 +121,11 @@ button[name=search]{
     height: 100%;
     border: none;
     outline: none;
+    cursor: pointer;
     margin: -4px;
+}
+button[name=search]:hover{
+    color: #02336b;
 }
 #container{
     width: 1200px;
@@ -108,11 +162,10 @@ button[name=search]{
 .navbar li a:hover {
     color: white;
     background-color: #3185e6;
-    font-weight: bold;
 }
 /* chu chay */
 .chuchay{
-    padding: 8px 15px 8px 5px;
+    padding: 8px 0px 8px 5px;
     width: 100%;
 }
 hr{
@@ -128,18 +181,18 @@ hr{
 }
 .chuchay marquee{
     display: inline-block;
-    width: 80%;
+    width: 81.9%;
     float: right;
 }
 /* tin tuc-sukien, lich cong tac */
 #container .left{
-    width: 52%;
+    width: 65%;
     float: left;
     display: block;
     min-height:470px;
 }
 #container .right{
-    width: 47%;
+    width: 34%;
     display: block;
     float: right;
     max-height: 460px;
@@ -165,6 +218,11 @@ hr{
     display: block;
     height: auto;
     margin: 0 auto;
+    transition: transform .2s linear;
+}
+.left .tin-chinh img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
 }
 .left .tin-chinh .title {
     width: 100%;
@@ -177,6 +235,9 @@ hr{
 .tin-chinh .title a{
     color: white;
     text-decoration: none;
+}
+.tin-chinh .title a:hover{
+    color:rgb(255, 225, 225);
 }
 .tin-chinh .title .time-post {
     color: white;
@@ -199,6 +260,7 @@ hr{
     display: inline-block;
     padding-bottom: 10px;
     border-bottom: 1px solid gray;
+    transition: color .2s linear;
 }
 .tin-phu ul li img{
     float: left;
@@ -220,6 +282,29 @@ hr{
 /* lich cong tac */
 .right{
     border: 1px solid #0963cc;
+}
+.right .list{
+    padding: 5px 0px;
+}
+.right .list ul{
+    padding: 2px 5px;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: #0963cc;
+    font-weight: bold;
+}
+.right .list ul li{
+    border-radius: 5px;
+    padding: 6px 14px;
+    border: 0.1px solid #0963cc;
+    margin: 9px 0px;
+    cursor: pointer;
+    transform: color .2s linear;
+}
+.right .list ul li:hover{
+    padding: 6px 0px 6px 30px;
+    background-color: #0963cc;
+    color: #fff;
 }
 .table-right table{
     border-collapse: collapse;
@@ -244,16 +329,23 @@ hr{
 }
 .right .title{
     height: 40px;
-    background-color: #0963cc;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(224,224,224,1) 100%);
     line-height: 40px;
     text-transform: uppercase;
-    color: white;
+    color: #0963cc;
+    border-bottom: 4px solid #0963cc;
     font-weight: bold;
     padding-left: 10px;
 }
 .right img{
     display: block;
     margin: 30px auto;
+    transition: transform .2s linear;
+}
+.right img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
 }
 .banner-ads{
     clear: both;
@@ -265,7 +357,6 @@ hr{
     padding: 2px;
 }
 .banner-ads img:hover{
-    opacity: 0.9;
     cursor: pointer;
 }
 .banner-ads img:first-child{
@@ -306,11 +397,13 @@ hr{
 }
 .column .title{
     height: 40px;
-    background-color: #0963cc;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(224,224,224,1) 100%);
     line-height: 40px;
     font-size: 15px;
     text-transform: uppercase;
-    color: white;
+    color: #0963cc;
+    border-bottom: 4px solid #0963cc;
     font-weight: bold;
     padding-left: 10px;
 }
@@ -356,6 +449,11 @@ hr{
     float: left;
     border: 1px solid gray;
     padding: 3px;
+    transition: transform .2s linear;
+}
+.tin1 img:hover{
+    transform: scale(1.5);
+    cursor: pointer;
 }
 .tin1-title{
     text-transform: uppercase;
@@ -370,6 +468,9 @@ hr{
 .tin1-title a{
     color: black;
     text-decoration: none;
+}
+.tin1-title a:hover{
+    color: #0963cc;
 }
 .tin1-title .timepost{
     position: absolute;
@@ -497,11 +598,13 @@ hr{
 }
 #intro .main .title{
     height: 40px;
-    background-color: #0963cc;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(224,224,224,1) 100%);
     line-height: 40px;
     font-size: 15px;
     text-transform: uppercase;
-    color: white;
+    color: #0963cc;
+    border-bottom: 4px solid #0963cc;
     font-weight: bold;
     padding-left: 10px;
 }
@@ -531,11 +634,13 @@ hr{
 }
 #feedback .form-fb .title{
     height: 40px;
-    background-color: #0963cc;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(224,224,224,1) 100%);
     line-height: 40px;
+    border-bottom: 4px solid #0963cc;
     font-size: 15px;
     text-transform: uppercase;
-    color: white;
+    color: #0963cc;
     font-weight: bold;
     padding-left: 10px;
 }
@@ -589,11 +694,13 @@ hr{
 }
 #questions .q-a .title{
     height: 40px;
-    background-color: #0963cc;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 38%, rgba(224,224,224,1) 100%);
     line-height: 40px;
     font-size: 15px;
     text-transform: uppercase;
-    color: white;
+    color: #0963cc;
+    border-bottom: 4px solid #0963cc;
     font-weight: bold;
     padding-left: 10px;
 }
@@ -603,11 +710,21 @@ hr{
     display: block;
     margin: 10px auto;
 }
+#questions .filter{
+    display: inline-block;
+    margin: 2px;
+    float: right;
+    font-size: 15px;
+}
+#questions .filter select{
+    font-size: 15px;
+    padding: 3px;
+    outline: none;
+}
 .list-question{
-    height: 500px;
+    clear: both;
+    min-height: 500px;
     display: block;
-    overflow: y;
-    overflow-x: hidden;
 }
 .list-question ul li.bg2{
     background-color: #E8F1FC;
@@ -624,12 +741,34 @@ hr{
 .list-question ul li{
     color: #0963cc;
     line-height: 30px;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     border-bottom: 1px dotted #0963cc;
 }
 .list-question ul li .timepost{
     color:rgb(141, 141, 141);
     font-size: 14px;
+}
+.pagination ul{
+    text-align: center;
+    list-style-type: none;
+    margin: 10px;
+    font-size: 20px;
+}
+.pagination ul li{
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 3px;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.pagination ul li:hover{
+    background-color: #0963cc;
+    color: #fff;
+}
+.pagination ul li.paging{
+    color: #fff;
+    background-color: #0963cc;
 }
 .q-a .slideshow{
     padding: 10px;

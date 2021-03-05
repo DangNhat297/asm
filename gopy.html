@@ -48,7 +48,7 @@
             <!-- menubar -->
             <div class="navbar">
                 <ul>
-                    <li><a href="trangchu.html">Trang chủ</a></li>
+                    <li><a href="trangchu.html"><i class="fas fa-home"></i></a></li>
                     <li><a href="gioithieu.html">Giới thiệu</a></li>
                     <li><a href="lienhe.html">Liên hệ</a></li>
                     <li><a href="gopy.html" class="active">Góp ý</a></li>
@@ -63,28 +63,29 @@
             </div>
             <hr>
             <!-- noi dung trang web -->
+            <div class="animated animatedFadeInUp fadeInUp">
             <div class="form-fb">
                 <div class="title" style="font-size: 13px">Trang chủ <i class="fas fa-chevron-right"></i> Góp ý</div>
-                <img src="img/feedback.png">
                 <form>
                 <label>Cơ quan tiếp nhận</label>
                 <input type="text" value="Trường THPT Trần Phú" disabled><br>
                 <label>Họ và tên (*)</label>
-                <input type="text" placeholder="Họ và tên người gửi"><br>
+                <input type="text" placeholder="Họ và tên người gửi" required><br>
                 <label>Email (*)</label>
-                <input type="text" placeholder="Email người gửi"><br>
+                <input type="text" placeholder="Email người gửi" required><br>
                 <label>Điện thoại</label>
                 <input type="text" placeholder="Số điện thoại"><br>
                 <label>Địa chỉ</label>
                 <input type="text" placeholder="Địa chỉ"><br>
                 <label>Tiêu đề</label>
-                <input type="text" placeholder="Tiêu đề"><br>
-                <label>Nội dung</label>
-                <textarea placeholder="Nội dung góp ý..." rows=5></textarea><br>
+                <input type="text" placeholder="Tiêu đề" required><br>
+                <label>Nội dung (*)</label>
+                <textarea placeholder="Nội dung góp ý..." rows=5 required></textarea><br>
                 <label>Đính kèm tệp</label>
                 <input type="file" multiple><br>
                 <button>Gửi</button>
                 </form>
+            </div>
             </div>
             <div class="footer">
                 <strong>ĐƠN VỊ CHỦ QUẢN: TRƯỜNG THPT TRẦN PHÚ</strong>

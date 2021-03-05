@@ -48,7 +48,7 @@
             <!-- menubar -->
             <div class="navbar">
                 <ul>
-                    <li><a href="trangchu.html">Trang chủ</a></li>
+                    <li><a href="trangchu.html"><i class="fas fa-home"></i></a></li>
                     <li><a href="gioithieu.html">Giới thiệu</a></li>
                     <li><a href="lienhe.html">Liên hệ</a></li>
                     <li><a href="gopy.html">Góp ý</a></li>
@@ -63,10 +63,19 @@
             </div>
             <hr>
             <!-- noi dung trang web -->
+            <div class="animated animatedFadeInUp fadeInUp">
             <div class="q-a">
                 <div class="title" style="font-size: 13px">Trang chủ <i class="fas fa-chevron-right"></i> Hỏi đáp</div>
-                <img src="img/qa.png">
-            <div class="list-question" id="style-2">
+                <div class="filter">
+                    <label>Bộ lọc:</label>
+                    <select>
+                        <option>Mới nhất</option>
+                        <option>Cũ nhất</option>
+                        <option>Phổ biến nhất</option>
+                        <option>Nhiều câu trả lời nhất</option>
+                    </select>
+                </div>
+                <div class="list-question">
                 <ul>
                     <li>
                         <div class="title-topic"><i class="fas fa-arrow-right"></i><a href=""> THỜI GIAN VÀ HƯỚNG DẪN ĐIỀU CHỈNH NGUYỆN VỌNG XÉT TUYỂN NĂM 2020</a></div>
@@ -92,15 +101,19 @@
                         <div class="title-topic"><i class="fas fa-arrow-right"></i><a href=""> NGƯỠNG ĐẢM BẢO CHẤT LƯỢNG ĐẦU VÀO NHÓM NGÀNH GIÁO VIÊN VÀ NHÓM NGÀNH SỨC KHỎE</a></div>
                         <div class="timepost"><i class="fas fa-calendar-day"></i> Ngày đăng:26/07/2019</div>
                     </li>
-                    <li>
-                        <div class="title-topic"><i class="fas fa-arrow-right"></i><a href=""> NGƯỠNG ĐẢM BẢO CHẤT LƯỢNG ĐẦU VÀO NHÓM NGÀNH GIÁO VIÊN VÀ NHÓM NGÀNH SỨC KHỎE</a></div>
-                        <div class="timepost"><i class="fas fa-calendar-day"></i> Ngày đăng:26/07/2019</div>
-                    </li>
-                    <li class="bg2">
-                        <div class="title-topic"><i class="fas fa-arrow-right"></i><a href=""> NGƯỠNG ĐẢM BẢO CHẤT LƯỢNG ĐẦU VÀO NHÓM NGÀNH GIÁO VIÊN VÀ NHÓM NGÀNH SỨC KHỎE</a></div>
-                        <div class="timepost"><i class="fas fa-calendar-day"></i> Ngày đăng:26/07/2019</div>
-                    </li>
                 </ul>
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li><i class="fas fa-angle-double-left"></i></li>
+                    <li class="paging">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>...</li>
+                    <li><i class="fas fa-angle-double-right"></i></li>
+                </ul>
+            </div>
             </div>
             </div>
             <div class="footer">
